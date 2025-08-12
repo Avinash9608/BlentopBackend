@@ -24,6 +24,7 @@ const allowedOrigins = [
   "http://localhost:5173", // Your Vite frontend origin
   "https://blentop-backend.vercel.app", // Vercel deployment URL
   "https://blentops-frontend.vercel.app", // Potential frontend Vercel URL
+  "https://blentops.vercel.app", // blantops admin panel
   // Add any other origins you need
 ];
 
@@ -49,8 +50,8 @@ app.use(express.json()); // body parser
 app.use(express.urlencoded({ extended: true }));
 
 // Root route
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Blentops API' });
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to Blentops API" });
 });
 
 // Routes
